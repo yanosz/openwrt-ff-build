@@ -8,8 +8,8 @@
 
 #### variables ####
 
-BUILD_DIR=/tmp/ff-kbu-build/
-TARGET=/tmp/ff-kbu-packages/
+BUILD_DIR=ar71xx-build
+TARGET=ar71xx-packages
 OPENWRT_CODENAME=barrier_breaker
 OPENWRT_VERSION=14.07
 OPENWRT_SDK=OpenWrt-SDK-ar71xx-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2
