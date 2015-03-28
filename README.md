@@ -18,7 +18,7 @@ Output-Directory: <code>./bin</code> - Included Packages:
 CI-Integration
 -------------------
 
-All packages are built using jenkins
+All packages are built using jenkins -- Note: x86 fails atm.
 
 * Job: https://jenkins.ffm.freifunk.net/jenkins/view/misc/job/misc-packages/
 * Deployment: https://jenkins.ffm.freifunk.net/files/packages-14.07/
