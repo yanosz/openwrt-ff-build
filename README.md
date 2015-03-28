@@ -14,3 +14,11 @@ Output-Directory: <code>./bin</code> - Included Packages:
 * batman-adv, batctl  (2014.4, 2013.4)
 * fastd (v17)
 * batman-adv(-legacy) (2013.4)
+
+CI-Integration
+===================
+
+All packages are built using jenkins
+
+* Job: https://jenkins.ffm.freifunk.net/jenkins/view/misc/job/misc-packages/
+* Deployment: https://jenkins.ffm.freifunk.net/files/packages-14.07/
