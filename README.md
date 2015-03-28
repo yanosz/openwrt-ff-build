@@ -16,7 +16,7 @@ Output-Directory: <code>./bin</code> - Included Packages:
 * batman-adv(-legacy) (2013.4)
 
 CI-Integration
-===================
+-------------------
 
 All packages are built using jenkins
 
