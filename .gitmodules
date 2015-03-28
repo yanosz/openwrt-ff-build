@@ -1,0 +1,15 @@
+[submodule "packages/pkg_fastd"]
+	path = packages/pkg_fastd
+	url = git://git.metameute.de/lff/pkg_fastd
+[submodule "packages/openwrt_routing"]
+	path = packages/openwrt_routing
+	url = https://github.com/openwrt-routing/packages.git
+[submodule "packages/openwrt-community"]
+	path = packages/openwrt-community
+	url = https://github.com/openwrt/packages.git
+[submodule "packages/olsrv2"]
+	path = packages/olsrv2
+	url = http://olsr.org/git/oonf.git
+[submodule "packages/gluon"]
+	path = packages/gluon
+	url = https://github.com/freifunk-gluon/packages.git

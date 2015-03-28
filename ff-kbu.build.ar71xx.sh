@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ## Build Script for kbu.freifunk.net firmware
 # Version 0.2
@@ -91,7 +91,8 @@ echo "$OPENWRT_IMAGEBUILDER..."
 echo "extract..."
 tar xjf "$OPENWRT_IMAGEBUILDER$OPENWRT_EXT"
 echo "copy dependencies to ImageBuilder..."
-cp "$BUILD_DIR"/openwrt-deps/*ipk "$BUILD_DIR/$OPENWRT_IMAGEBUILDER/packages/"
+echo "$BUILD_DIR"/openwrt-deps/*ipk "$BUILD_DIR/$OPENWRT_IMAGEBUILDER/packages/"
+exit
 
 echo "extracting kbu packages..."
 tar xzf "$KBU_DL_NAME" -C "$BUILD_DIR/$OPENWRT_SDK/package/"
