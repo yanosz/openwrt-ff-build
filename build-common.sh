@@ -1,14 +1,5 @@
 #!/bin/bash
 
-function usubmodules {
-
-  cd $base/packages/gluon;  git pull
-  cd $base/packages/openwrt-community; git pull
-  cd $base/packages/openwrt_routing; git pull
-  cd $base/packages/pkg_fastd; git pull
-  git commit -a -m "Pulled submodules"
-}
-
 
 function build {
   base=$(pwd)
@@ -38,7 +29,7 @@ function build {
   ln -s $base/packages/olsrv2/openwrt $BUILD_DIR/$OPENWRT_SDK/package/olsrv2
 
   #patch SDK (https://projects.universe-factory.net/issues/206#change-438)
-  cd $BUILD_DIR/$OPENWRT_SDK/; patch -p1 < $base/patches/sdk/0001-build-fix-CMake-assembly-builds-with-ccache.patch
+  patch -d  $BUILD_DIR/$OPENWRT_SDK -p1 < $base/patches/sdk/0001-build-fix-CMake-assembly-builds-with-ccache.patch
   #### compile ####
    
   make -C $BUILD_DIR/$OPENWRT_SDK world V=99
