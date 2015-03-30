@@ -13,6 +13,7 @@ Output-Directory: <code>./bin</code> - Included Packages:
 * bmx6
 * batman-adv, batctl  (2014.4)
 * fastd (v17)
+* Config-Mode (LFF, Pre-Gluon, KBU-flavored)
 * batman-adv(-legacy) (2013.4)
 
 CI-Integration
