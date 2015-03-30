@@ -35,6 +35,6 @@ function build {
   make -C $BUILD_DIR/$OPENWRT_SDK world V=99
 
   ### Deploy
-  cp -a $BUILD_DIR/$OPENWRT_SDK/bin/ar71xx/packages/base/* $TARGET
+  cp -a $BUILD_DIR/$OPENWRT_SDK/bin/$ARCH/packages/base/* $TARGET
 
 }

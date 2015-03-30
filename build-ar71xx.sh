@@ -2,8 +2,9 @@
 
 #### variables ####
 
-BUILD_DIR=ar71xx-build
-TARGET=bin/ar71xx
+ARCH=ar71xx
+BUILD_DIR=$ARCH-build
+TARGET=bin/$ARCH
 OPENWRT_CODENAME=barrier_breaker
 OPENWRT_VERSION=14.07
 OPENWRT_SDK=OpenWrt-SDK-ar71xx-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2
