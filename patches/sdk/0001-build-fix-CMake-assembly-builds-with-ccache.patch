@@ -1,0 +1,33 @@
+From b9af8eaec856ca94a2b5c8fba5511bef02d45826 Mon Sep 17 00:00:00 2001
+Message-Id: <b9af8eaec856ca94a2b5c8fba5511bef02d45826.1427563777.git.mschiffer@universe-factory.net>
+From: Matthias Schiffer <mschiffer@universe-factory.net>
+Date: Sat, 28 Mar 2015 18:22:38 +0100
+Subject: [PATCH] build: fix CMake assembly builds with ccache
+
+CMAKE_ASM_COMPILER is automatically set to CMAKE_C_COMPILER by CMake, but
+CMAKE_C_COMPILER_ARG1 is lost. This causes assembly builds to fail when ccache
+is enabled (for example the package fastd on x86).
+
+Fix this by explicitly defining CMAKE_ASM_COMPILER and CMAKE_ASM_COMPILER_ARG1.
+
+Signed-off-by: Matthias Schiffer <mschiffer@universe-factory.net>
+---
+ include/cmake.mk | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/include/cmake.mk b/include/cmake.mk
+index c1fd7d9..49fba26 100644
+--- a/include/cmake.mk
++++ b/include/cmake.mk
+@@ -49,6 +49,8 @@ define Build/Configure/Default
+ 			-DCMAKE_C_COMPILER_ARG1="$(CMAKE_C_COMPILER_ARG1)" \
+ 			-DCMAKE_CXX_COMPILER="$(CMAKE_CXX_COMPILER)" \
+ 			-DCMAKE_CXX_COMPILER_ARG1="$(CMAKE_CXX_COMPILER_ARG1)" \
++			-DCMAKE_ASM_COMPILER="$(CMAKE_C_COMPILER)" \
++			-DCMAKE_ASM_COMPILER_ARG1="$(CMAKE_C_COMPILER_ARG1)" \
+ 			-DCMAKE_EXE_LINKER_FLAGS:STRING="$(TARGET_LDFLAGS)" \
+ 			-DCMAKE_MODULE_LINKER_FLAGS:STRING="$(TARGET_LDFLAGS)" \
+ 			-DCMAKE_SHARED_LINKER_FLAGS:STRING="$(TARGET_LDFLAGS)" \
+-- 
+2.3.4
+
