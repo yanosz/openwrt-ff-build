@@ -29,7 +29,7 @@ Usage
 --------------------------
 
 1. Clone or Fork
-1. Update submodules <code>./package/</code> to your favorite revision
+1. Update submodules <code>package/.....</code> to your favorite revision
 1. Run <code>./build-ar71xx.sh</code> respectivly <code>./build-x86.sh</code> for building.
 
 
@@ -37,4 +37,4 @@ Usage
 Remarks
 ----------------------
 
-* For olsr v2 tag 0.17 is used. Updating the submodule means following trunk. Be warned 😱.
+* For olsr v2 tag 0.7.1 is used. Updating the submodule means following trunk. 😱
