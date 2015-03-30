@@ -37,8 +37,10 @@ function build {
   # OLSRv2
   ln -s $base/packages/olsrv2/openwrt $BUILD_DIR/$OPENWRT_SDK/package/olsrv2
 
+  #patch SDK (https://projects.universe-factory.net/issues/206#change-438)
+  cd $BUILD_DIR/$OPENWRT_SDK/; patch -p1 < $base/patches/sdk/0001-build-fix-CMake-assembly-builds-with-ccache.patch
   #### compile ####
-
+   
   make -C $BUILD_DIR/$OPENWRT_SDK world V=99
 
   ### Deploy
