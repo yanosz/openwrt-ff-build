@@ -31,7 +31,10 @@ echo "Downloads..."
 [ -e "$OPENWRT_SDK$OPENWRT_EXT" ] || wget "http://downloads.openwrt.org/$OPENWRT_CODENAME/$OPENWRT_VERSION/ar71xx/generic/$OPENWRT_SDK$OPENWRT_EXT"
 
 echo "$OPENWRT_SDK..."
-[ -e "$OPENWRT_SDK" ] || (echo "extract..."; tar xjf "$OPENWRT_SDK$OPENWRT_EXT")
+
+[ -e "$OPENWRT_SDK" ] && (echo "delete..." ; rm -rf "$OPENWRT_SDK")
+echo "extract..."
+tar xjf "$OPENWRT_SDK$OPENWRT_EXT"
 
 
 
