@@ -18,4 +18,4 @@
 	url = https://github.com/ff-kbu/fff-config-mode.git
 [submodule "packages/pkg_lighttpd"]
 	path = packages/pkg_lighttpd
-	url = https://github.com/yanosz/pkg_lighthtpd
+	url = https://github.com/yanosz/pkg_lighttpd
