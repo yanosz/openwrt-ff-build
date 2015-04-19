@@ -28,7 +28,7 @@ mkdir -p "$TARGET"
 cd "$BUILD_DIR"
 
 echo "Downloads..."
-[ -e "$OPENWRT_SDK$OPENWRT_EXT" ] || wget "http://downloads.openwrt.org/$OPENWRT_CODENAME/$OPENWRT_VERSION/ar71xx/generic/$OPENWRT_SDK$OPENWRT_EXT"
+[ -e "$OPENWRT_SDK$OPENWRT_EXT" ] || wget "https://jenkins.ffm.freifunk.net/files/14.07.1/ar71xx/OpenWrt-SDK-ar71xx-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2"
 
 echo "$OPENWRT_SDK..."
 
