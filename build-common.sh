@@ -26,6 +26,7 @@ function build {
   ln -s $base/packages/fff-config-mode/luci/ $BUILD_DIR/$OPENWRT_SDK/package/config-mode
 
   # Patch batman-adv
+  mkdir -p $BUILD_DIR/$OPENWRT_SDK/package/batman-adv/patches
   cp -a $base/patches/batman-adv/* $BUILD_DIR/$OPENWRT_SDK/package/batman-adv/patches
 
   # Bird
