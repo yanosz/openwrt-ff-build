@@ -43,7 +43,7 @@ function build {
   #### compile ####
   
    
-  make -C $BUILD_DIR/$OPENWRT_SDK clean world V=99
+  make -C $BUILD_DIR/$OPENWRT_SDK world V=99
 
   ### Deploy
   cp -a $BUILD_DIR/$OPENWRT_SDK/bin/$ARCH/packages/base/* $TARGET
