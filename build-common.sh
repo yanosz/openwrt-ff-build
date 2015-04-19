@@ -41,8 +41,9 @@ function build {
   #patch SDK (https://projects.universe-factory.net/issues/206#change-438)
   patch -d  $BUILD_DIR/$OPENWRT_SDK -p1 < $base/patches/sdk/0001-build-fix-CMake-assembly-builds-with-ccache.patch
   #### compile ####
+  
    
-  make -C $BUILD_DIR/$OPENWRT_SDK world V=99
+  make -C $BUILD_DIR/$OPENWRT_SDK clean world V=99
 
   ### Deploy
   cp -a $BUILD_DIR/$OPENWRT_SDK/bin/$ARCH/packages/base/* $TARGET
