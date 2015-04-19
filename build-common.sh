@@ -10,15 +10,7 @@ function build {
   ln -s $base/packages/pkg_fastd/libs/ $BUILD_DIR/$OPENWRT_SDK/package/libs
   ln -s $base/packages/openwrt-community/libs/nacl/ $BUILD_DIR/$OPENWRT_SDK/package/nacl
 
-  #nginx - minimal - patch default options for minimal build
-  #ln -s $base/packages/openwrt-community/net/lighttpd/ $BUILD_DIR/$OPENWRT_SDK/package/lighttpd
-  ln -s $base/packages/openwrt-community/libs/libxml2/ $BUILD_DIR/$OPENWRT_SDK/package/libxml2
-  #ln -s $base/packages/openwrt-community/libs/sqlite3  $BUILD_DIR/$OPENWRT_SDK/package/sqlite3
-  ln -s $base/packages/openwrt-community/libs/pcre/  $BUILD_DIR/$OPENWRT_SDK/package/pcre
-  #ln -s $base/packages/openwrt-community/utils/mysql/ $BUILD_DIR/$OPENWRT_SDK/package/mysq
-  ln -s $base/packages/pkg_lighttpd/lighttpd/ $BUILD_DIR/$OPENWRT_SDK/package/lighttpd
-
-  #batman-adv, batctl, alfred (incl depends)
+    #batman-adv, batctl, alfred (incl depends)
   ln -s $base/packages/openwrt_routing/alfred $BUILD_DIR/$OPENWRT_SDK/package/alfred
   ln -s $base/packages/openwrt_routing/batctl $BUILD_DIR/$OPENWRT_SDK/package/batctl
   ln -s $base/packages/openwrt_routing/batman-adv $BUILD_DIR/$OPENWRT_SDK/package/batman-adv
@@ -36,9 +28,7 @@ function build {
   #bmx6
   ln -s $base/packages/openwrt_routing/bmx6 $BUILD_DIR/$OPENWRT_SDK/package/bmx6
 
-  # OLSRv2
-  ln -s $base/packages/olsrv2/openwrt $BUILD_DIR/$OPENWRT_SDK/package/olsrv2
-
+  
   #patch SDK (https://projects.universe-factory.net/issues/206#change-438)
   patch -d  $BUILD_DIR/$OPENWRT_SDK -p1 < $base/patches/sdk/0001-build-fix-CMake-assembly-builds-with-ccache.patch
   #### compile ####
