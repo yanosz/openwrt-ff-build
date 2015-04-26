@@ -34,6 +34,8 @@ function build {
   ln -s $base/packages/fff-config-mode/luci/ $BUILD_DIR/$OPENWRT_SDK/package/config-mode
 
   ## Patch batman-adv
+  # Patch batman-adv
+  mkdir -p $BUILD_DIR/$OPENWRT_SDK/package/batman-adv/patches
   cp -a $base/patches/batman-adv/* $BUILD_DIR/$OPENWRT_SDK/package/batman-adv/patches
 
   ## Bird
@@ -45,7 +47,6 @@ function build {
 
   ## OLSRv2
   ln -s $base/packages/olsrv2/openwrt $BUILD_DIR/$OPENWRT_SDK/package/olsrv2
-
   #patch SDK (https://projects.universe-factory.net/issues/206#change-438)
   patch -d  $BUILD_DIR/$OPENWRT_SDK -p1 < $base/patches/sdk/0001-build-fix-CMake-assembly-builds-with-ccache.patch
   #### compile ####
