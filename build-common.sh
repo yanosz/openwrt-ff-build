@@ -13,6 +13,7 @@ function build {
   ## collectd v5
   ln -s $base/packages/openwrt-community/utils/collectd/ $BUILD_DIR/$OPENWRT_SDK/package/collectd
   ln -s $base/packages/openwrt-community/libs/liboping $BUILD_DIR/$OPENWRT_SDK/package/liboping
+  ln -s $base/packages/openwrt-community/utils/rrdtool1/ $BUILD_DIR/$OPENWRT_SDK/package/rrdtool1
   ### Disable selections due to libcurl and obscure dependencies
   echo "
 # CONFIG_PACKAGE_collectd-mod-apache is not set
@@ -24,6 +25,7 @@ function build {
 # CONFIG_PACKAGE_collectd-mod-postgresql is not set
 # CONFIG_PACKAGE_collectd-mod-sensors is not set
 # CONFIG_PACKAGE_collectd-mod-write-http is not set
+# CONFIG_PACKAGE_collectd-mod-snmp is not set
   " >> $BUILD_DIR/$OPENWRT_SDK/.config
 
   ## batman-adv, batctl, alfred (incl depends)
